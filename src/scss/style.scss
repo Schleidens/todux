@@ -1,5 +1,87 @@
 $color: white;
 
-.button{
-    background-color: black;
+@mixin basic-style {
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+@mixin form-style {
+    @include basic-style;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+.input__form{
+
+    .form{
+        display: flex;
+    }
+
+    input{
+        @include form-style;
+        width: 100%;
+    }
+
+    input:focus{
+        border: 2px solid #111;
+    }
+
+    button{
+        width: 140px;
+        align-items: center;
+        text-align: center;
+
+        margin-left: 10px;
+        @include form-style;
+    }
+}
+
+/* CSS */
+// .button-56 {
+
+// }
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+
+
+ul{
+    margin: 0;
+    padding: 0px;
+    .todo__item{
+        @include basic-style;
+    
+        list-style: none;
+    
+        margin-top: 10px;
+        padding: 5px;
+    }
 }

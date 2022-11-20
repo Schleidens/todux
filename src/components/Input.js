@@ -20,14 +20,14 @@ export default function Input() {
     };
 
   return (
-    <div>
-        <form action="">
+    <div className='input__form'>
+        <form action="" className='form'>
             <input 
             type="text"
             value={value}
             onChange={(event) => setValue(event.target.value)}
              />
-            <button onClick={addTodoToList} className="button">add</button>
+            <button onClick={addTodoToList} className="button-56">Add Todo</button>
         </form>
     </div>
   )
