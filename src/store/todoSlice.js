@@ -2,12 +2,11 @@ import {createSlice} from '@reduxjs/toolkit'
 
 export const todoSlice = createSlice({
     name: 'todos',
-    initialState: [
-    ],
+    initialState: [],
     reducers: {
         addTodo: (state, action)=>{
             const todo = {
-                id: Math.floor(Math.random() * 10),
+                id: Math.floor(Math.random() * 200),
                 title: action.payload.title,
                 completed: false
             };
