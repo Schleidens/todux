@@ -9,7 +9,7 @@ export default function Homepage() {
     <div>
         <Input />
         <ul>
-        {todos.map((todo, index)=>(
+        {todos.map((todo)=>(
             <TodoItem title={todo.title} id={todo.id} key={todo.id}/>
         ))}
         </ul>
