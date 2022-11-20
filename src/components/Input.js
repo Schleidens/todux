@@ -27,7 +27,7 @@ export default function Input() {
             value={value}
             onChange={(event) => setValue(event.target.value)}
              />
-            <button onClick={addTodoToList}>add</button>
+            <button onClick={addTodoToList} className="button">add</button>
         </form>
     </div>
   )
