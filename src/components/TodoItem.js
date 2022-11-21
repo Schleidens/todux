@@ -1,11 +1,24 @@
 import React from 'react'
+import { useDispatch } from "react-redux";
+import { deleteTodo } from "../store/todoSlice";
 
-export default function TodoItem(props) {
+export default function TodoItem({title, id}) {
+  const dispatch = useDispatch();
+
+
+  const Remove = () =>{
+      dispatch(
+            deleteTodo({
+              id
+            })
+      )
+  }
   return (
         <li className='todo__item'>
-            {props.title}
-            {props.id}
-            <input type="checkbox" name="" id="" />
+            {title}
+            <button onClick={Remove}>
+              Remove
+            </button>
         </li>
   )
 }

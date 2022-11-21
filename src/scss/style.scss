@@ -1,3 +1,7 @@
+body{
+    margin: 10px 40px 0px 40px;
+}
+
 $color: white;
 
 @mixin basic-style {
@@ -83,5 +87,11 @@ ul{
     
         margin-top: 10px;
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            @include basic-style;
+        }
     }
 }
